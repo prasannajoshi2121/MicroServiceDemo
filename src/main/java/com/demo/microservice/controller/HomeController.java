@@ -27,7 +27,7 @@ public class HomeController {
 	}
 	
 	
-	@RequestMapping("/hello")
+	@RequestMapping(value="/hello",method=RequestMethod.GET)
 	public String home()
 	{
 		return "Special Hello from Heroku.........";
