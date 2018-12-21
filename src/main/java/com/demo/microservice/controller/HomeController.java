@@ -26,6 +26,13 @@ public class HomeController {
 		return "Spring boooooooooot is working ";
 	}
 	
+	
+	@RequestMapping("/hello")
+	public String home()
+	{
+		return "Special Hello from Heroku.........";
+	}
+	
 	@RequestMapping(value="/read", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody SampleModel getSampleData(@RequestParam("id") int id){
 		System.out.println("inside controller ->getAll data ->calling getAllData");
